@@ -591,7 +591,7 @@ EOF
 
     if [ -n "$APXS_PATH" ]; then
         _LIBEXECDIR=`$APXS_PATH -q LIBEXECDIR`
-        sed -i"" -e "s|LIBEXECDIR='\$(INSTALL_ROOT)$_LIBEXECDIR'|LIBEXECDIR=$PREFIX/libexec|" "$source_path/Makefile"
+        sed -i"" -e "s|LIBEXECDIR='\$(INSTALL_ROOT)$_LIBEXECDIR'|LIBEXECDIR=$PREFIX|" "$source_path/Makefile"
     fi
 
     cd "$backup_pwd"
